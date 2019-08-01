@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Hypo-Survivor</string>
+    <string name="questions">Some stuff with lorem ipsum of dimsum. Lack lips sung of dit mung  to true two do doe dee da flaw fa fi mi so ti like a drink with jam and bread...</string>
+    <string name="answers">Something something something about oremlay ipsumsay igpay atinlay eadday oochiecay icklay oralay exsay eakfray eetsshay umcay ainstay</string>
+    <string name="yd">You're Dead!</string>
+    <string name="congrat">CONGRATULATIONS!</string>
+    <string name="surv">You are an advent survivor!</string>
+    <string name="surv1">You could survive in the wilderness whether you are lost or just trekking the trails. You should proud of yourself!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
