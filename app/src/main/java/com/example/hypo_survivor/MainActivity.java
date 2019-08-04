@@ -14,13 +14,12 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
 
     //variables for username and start button
     private EditText userName;
-    private Button startButton;
 
     //SharedPreferences object to store username
     private SharedPreferences savedValues;
 
     //input data variables
-    private string uName;
+    private String uName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
 
         //create references for variables
         userName = findViewById(R.id.userName);
-        startButton = findViewById(R.id.startButton);
+        Button startButton = findViewById(R.id.startButton);
 
         //create listeners
         userName.setOnEditorActionListener(this);
@@ -43,7 +42,7 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
     protected void onPause() {
         // Instance variables for onPause() method
         SharedPreferences.Editor editor = savedValues.edit();
-        editor.putString("uName", (String) uName);
+        editor.putString("uName", uName);
         editor.apply();
 
         super.onPause();
@@ -54,10 +53,10 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
         super.onResume();
 
         // Instance variables for onResume() method
-        uName = (string) savedValues.getString("uName", "");
+        uName = savedValues.getString(String.valueOf(userName), uName);
 
         // Set userName
-        userName.setText((String) uName);
+        userName.setText(uName);
     }
 
     @Override
