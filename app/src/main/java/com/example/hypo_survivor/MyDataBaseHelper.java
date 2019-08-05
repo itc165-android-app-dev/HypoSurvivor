@@ -55,7 +55,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS" + CREATE_TABLE_QUESTION); // drop table if exists
+        db.execSQL("DROP TABLE IF EXISTS " + CREATE_TABLE_QUESTION); // drop table if exists
         onCreate(db);
     }
 
@@ -116,7 +116,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
                 // adding to Questions list
                 questionArrayList.add(question);
             } while (c.moveToNext());
-            Collections.shuffle(questionArrayList);
+            Collections.addAll(questionArrayList);
         }
         return questionArrayList;
     }
