@@ -116,7 +116,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
                 // adding to Questions list
                 questionArrayList.add(question);
             } while (c.moveToNext());
-            Collections.shuffle(questionArrayList);
+            Collections.addAll(questionArrayList);
         }
         return questionArrayList;
     }
