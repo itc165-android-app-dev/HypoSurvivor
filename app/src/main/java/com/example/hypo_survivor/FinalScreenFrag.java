@@ -2,6 +2,7 @@ package com.example.hypo_survivor;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 
 public class FinalScreenFrag extends AppCompatActivity {
+    public static SharedPreferences savedValues;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class FinalScreenFrag extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
-        TextView textView8 = findViewById(R.id.textView8);
-        textView8.setText(message);
+        TextView username = findViewById(R.id.userName);
+        username.setText(message);
     }
 }

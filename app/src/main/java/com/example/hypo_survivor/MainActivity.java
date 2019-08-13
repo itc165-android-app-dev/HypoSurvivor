@@ -63,7 +63,7 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, QuestionActivity.class);
-        EditText editText = (EditText) findViewById(R.id.userName);
+        EditText editText = findViewById(R.id.userName);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);

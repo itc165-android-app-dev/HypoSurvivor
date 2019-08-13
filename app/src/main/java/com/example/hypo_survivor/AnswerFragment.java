@@ -1,13 +1,16 @@
 package com.example.hypo_survivor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 
 /**
@@ -18,7 +21,7 @@ import android.view.ViewGroup;
  * Use the {@link AnswerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AnswerFragment extends AppCompatActivity {
+public class AnswerFragment extends AppCompatActivity implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -56,9 +59,8 @@ public class AnswerFragment extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_answer);
-      //  if (getArguments() != null) {
-         //   mParam1 = getArguments().getString(ARG_PARAM1);
-        //    mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
    // }
 
@@ -93,6 +95,13 @@ public class AnswerFragment extends AppCompatActivity {
         mListener = null;
     }
 
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(AnswerFragment.this, MainActivity.class));
+
+    }
+
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -106,5 +115,20 @@ public class AnswerFragment extends AppCompatActivity {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(AnswerFragment.this, MainActivity.class));
+    }
+
+//     Before 2.0
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            startActivity(new Intent(AnswerFragment.this, MainActivity.class));
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

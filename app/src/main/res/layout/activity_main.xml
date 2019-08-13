@@ -47,6 +47,7 @@
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_marginBottom="144dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:hint="@string/user"
@@ -55,6 +56,5 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
