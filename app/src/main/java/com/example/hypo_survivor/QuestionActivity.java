@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -68,10 +69,16 @@ public class QuestionActivity extends AppCompatActivity {
             mQuestionNumber++;
         }
         else {
-            Toast.makeText(QuestionActivity.this, "It was the last question!", Toast.LENGTH_SHORT).show();
-            //Intent intent = new Intent(QuizActivity.this, HighestScoreActivity.class);
-            // intent.putExtra("score", mScore); // pass the current score to the second screen
-            // startActivity(intent);
+            lastQuestion();
+
+        }
+    }
+
+    private void lastQuestion(){
+        if(mQuestionNumber==mQuestionLibrary.getLength() ) {
+            Intent intent = getIntent();
+            String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+            startActivity(new Intent(QuestionActivity.this, FinalScreenFrag.class));
         }
     }
 
@@ -88,7 +95,8 @@ public class QuestionActivity extends AppCompatActivity {
             // mScore = mScore + 1;
             Toast.makeText(QuestionActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
         }else
-            Toast.makeText(QuestionActivity.this, "Wrong!", Toast.LENGTH_SHORT).show();
+           // startActivity(new Intent(QuestionActivity.this, AnswerFragment.class));
+            startActivity(new Intent(QuestionActivity.this, AnswerFragment.class));
         // show current total score for the user
         // updateScore(mScore);
         // once user answer the question, we move on to the next one, if any

@@ -11,15 +11,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity<string> extends AppCompatActivity implements TextView.OnEditorActionListener, View.OnClickListener {
+    public static final String EXTRA_MESSAGE = "com.example.hypo_survivor.MESSAGE";
 
     //variables for username and start button
-    private EditText userName;
+    public static EditText userName;
 
     //SharedPreferences object to store username
-    private SharedPreferences savedValues;
+    public static SharedPreferences savedValues;
 
     //input data variables
-    private String uName;
+    public static String uName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,12 @@ public class MainActivity<string> extends AppCompatActivity implements TextView.
 
     @Override
     public void onClick(View v) {
-        startActivity(new Intent(MainActivity.this, QuestionActivity.class));
+        Intent intent = new Intent(this, QuestionActivity.class);
+        EditText editText = (EditText) findViewById(R.id.userName);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+        //startActivity(new Intent(MainActivity.this, QuestionActivity.class));
     }
 
     @Override

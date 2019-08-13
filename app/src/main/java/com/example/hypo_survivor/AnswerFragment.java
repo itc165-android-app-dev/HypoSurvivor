@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import android.view.ViewGroup;
  * Use the {@link AnswerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AnswerFragment extends Fragment {
+public class AnswerFragment extends AppCompatActivity {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -47,20 +48,21 @@ public class AnswerFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+        //fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        setContentView(R.layout.activity_question);
+      //  if (getArguments() != null) {
+         //   mParam1 = getArguments().getString(ARG_PARAM1);
+        //    mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
+   // }
 
-    @Override
+   // @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -74,9 +76,9 @@ public class AnswerFragment extends Fragment {
         }
     }
 
-    @Override
+  //  @Override
     public void onAttach(Context context) {
-        super.onAttach(context);
+    //    super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -85,9 +87,9 @@ public class AnswerFragment extends Fragment {
         }
     }
 
-    @Override
+   // @Override
     public void onDetach() {
-        super.onDetach();
+    ///    super.onDetach();
         mListener = null;
     }
 

@@ -9,8 +9,8 @@
 
     <RadioGroup
         android:id="@+id/buttonGroup"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="349dp"
+        android:layout_height="236dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -25,7 +25,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="Answer 1" />
+            android:text="Answer 1"
+            android:textAlignment="viewStart" />
 
         <Button
             android:id="@+id/a2"
@@ -33,7 +34,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="Answer 2" />
+            android:text="Answer 2"
+            android:textAlignment="viewStart" />
 
         <Button
             android:id="@+id/a3"
@@ -41,15 +43,18 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="Answer 3" />
+            android:text="Answer 3"
+            android:textAlignment="viewStart" />
 
         <Button
             android:id="@+id/a4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onClick" />
-            android:text="Answer 4" />
+            android:onClick="onClick"
+            android:text="Answer 4"
+            android:textAlignment="viewStart" />
+        android:text="Answer 4" />
     </RadioGroup>
 
     <TextView
