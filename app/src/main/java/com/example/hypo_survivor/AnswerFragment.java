@@ -55,7 +55,7 @@ public class AnswerFragment extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question);
+        setContentView(R.layout.fragment_answer);
       //  if (getArguments() != null) {
          //   mParam1 = getArguments().getString(ARG_PARAM1);
         //    mParam2 = getArguments().getString(ARG_PARAM2);
