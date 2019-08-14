@@ -76,8 +76,8 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void lastQuestion(){
         if(mQuestionNumber==mQuestionLibrary.getLength() ) {
-            Intent intent = getIntent();
-            String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+           // Intent intent = getIntent();
+            //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
             startActivity(new Intent(QuestionActivity.this, FinalScreenFrag.class));
         }
     }
