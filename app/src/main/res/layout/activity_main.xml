@@ -16,7 +16,6 @@
         android:layout_marginBottom="116dp"
         android:background="#005F03"
         android:clickable="true"
-
         android:shadowColor="#020000"
         android:shadowDx="10"
         android:shadowDy="10"

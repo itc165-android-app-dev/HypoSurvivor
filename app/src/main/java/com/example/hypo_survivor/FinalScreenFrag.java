@@ -31,7 +31,7 @@ public class FinalScreenFrag extends MainActivity implements View.OnClickListene
 
     }
 
-    /*public void onBackPressed() {
+    public void onBackPressed() {
         startActivity(new Intent(FinalScreenFrag.this, MainActivity.class));
     }
 
@@ -43,7 +43,7 @@ public class FinalScreenFrag extends MainActivity implements View.OnClickListene
             return true;
         }
         return super.onKeyDown(keyCode, event);
-    }*/
+    }
 }
 
 
