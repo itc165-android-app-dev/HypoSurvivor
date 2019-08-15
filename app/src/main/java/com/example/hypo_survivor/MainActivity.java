@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        uName = findViewById(R.id.userName); //(EditText)
+        uName = findViewById(R.id.uName); //(EditText)
         startButton = findViewById(R.id.startButton); //(Button)
 
         startButton.setOnClickListener(new View.OnClickListener(){
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view){
                 //set condition
                 userName = uName.getText().toString();
-                if ((uName.length()==0)&& (userName!="") &&(userName != null)) {
+                if ((uName.length()==0)|| (userName=="") ||(userName == null)) {
                     uName.setError("Please enter your Name");
 
                 }
